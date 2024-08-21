@@ -6,8 +6,8 @@
 // @author       Tondog
 // @match        https://songmeanings.com/songs/view/*
 // @match        https://songmeanings.com/threads/c/*
-// @updateUrl    https://github.com/tondog/SongMeanings/raw/main/SongMeanings.user.js
-// @downloadUrl  https://github.com/tondog/SongMeanings/raw/main/SongMeanings.user.js
+// @updateURL    https://github.com/tondog/SongMeanings/raw/main/SongMeanings.user.js
+// @downloadURL  https://github.com/tondog/SongMeanings/raw/main/SongMeanings.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=songmeanings.com
 // ==/UserScript==
 
