@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Restore Dates on SongMeanings
 // @namespace    https://github.com/tondog/SongMeanings/
-// @version      2024.05
+// @version      2024.01
 // @description  Gotta know when users are mad on Christmas Eve!
 // @author       Tondog
 // @match        https://songmeanings.com/songs/view/*
@@ -11,39 +11,35 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=songmeanings.com
 // ==/UserScript==
 
-(function () {
-	"use strict";
+const isSongPage = window.url.includes("/songs/view/");
 
-	const isSongPage = window.url.includes("/songs/view/");
+const restoreTimes = () => {
+	const times = document.querySelectorAll("time.timeago.timeago_short");
 
-	const restoreTimes = () => {
-		const times = document.querySelectorAll("time.timeago.timeago_short");
+	times.forEach((time) => {
+		time.innerHTML = time.getAttribute("datetime");
+	});
+};
 
-		times.forEach((time) => {
-			time.innerHTML = time.getAttribute("datetime");
+if (isSongPage)
+{
+	const targetNode = document.querySelector("#explorebar ~ .wrapper > .col-flex");
+
+	const observer = new MutationObserver((mutations) => {
+		mutations.forEach((mutation) => {
+			console.log("Mutation observed:", mutation);
+			if (mutation.addedNodes.length > 0)
+			{
+				restoreTimes();
+			}
 		});
+	});
+
+	const config = {
+		childList: true
 	};
 
-	if (isSongPage)
-	{
-		const targetNode = document.querySelector("#explorebar ~ .wrapper > .col-flex");
+	observer.observe(targetNode, config);
+}
 
-		const observer = new MutationObserver((mutations) => {
-			mutations.forEach((mutation) => {
-				console.log("Mutation observed:", mutation);
-				if (mutation.addedNodes.length > 0)
-				{
-					restoreTimes();
-				}
-			});
-		});
-
-		const config = {
-			childList: true
-		};
-
-		observer.observe(targetNode, config);
-	}
-
-	restoreTimes();
-})();
+restoreTimes();
