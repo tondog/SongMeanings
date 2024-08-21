@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Restore Dates on SongMeanings
-// @namespace    https://gist.github.com/2272f960eab61481e5133d8709a37197
+// @namespace    https://github.com/tondog/SongMeanings/
 // @version      2024.04
 // @description  Gotta know when users are mad on Christmas Eve!
 // @author       Tondog
 // @match        https://songmeanings.com/songs/view/*
 // @match        https://songmeanings.com/threads/c/*
-// @updateUrl    https://gist.github.com/tondog/2272f960eab61481e5133d8709a37197/raw/SongMeanings.user.js
-// @downloadUrl  https://gist.github.com/tondog/2272f960eab61481e5133d8709a37197/raw/SongMeanings.user.js
+// @updateUrl    https://github.com/tondog/SongMeanings/raw/main/SongMeanings.user.js
+// @downloadUrl  https://github.com/tondog/SongMeanings/raw/main/SongMeanings.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=songmeanings.com
 // ==/UserScript==
 
