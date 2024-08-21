@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Restore Dates on SongMeanings
 // @namespace    https://github.com/tondog/SongMeanings/
-// @version      2024.04
+// @version      2024.05
 // @description  Gotta know when users are mad on Christmas Eve!
 // @author       Tondog
 // @match        https://songmeanings.com/songs/view/*
