@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Restore Dates on SongMeanings
 // @namespace    https://github.com/tondog/SongMeanings/
-// @version      2024.03
+// @version      2024.04
 // @description  Gotta know when users are mad on Christmas Eve!
 // @author       Tondog
 // @match        https://songmeanings.com/songs/view/*
@@ -27,7 +27,6 @@ if (isSongPage)
 
 	const observer = new MutationObserver((mutations) => {
 		mutations.forEach((mutation) => {
-			console.log("Mutation observed:", mutation);
 			if (mutation.addedNodes.length > 0)
 			{
 				restoreTimes();
