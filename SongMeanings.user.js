@@ -11,7 +11,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=songmeanings.com
 // ==/UserScript==
 
-const isSongPage = window.url.includes("/songs/view/");
+const isSongPage = document.URL.includes("/songs/view/");
 
 const restoreTimes = () => {
 	const times = document.querySelectorAll("time.timeago.timeago_short");
